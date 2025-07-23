@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeSmart Pro API Documentation</title>
+  <link rel="stylesheet" href="https://unpkg.com/swagger-ui-dist/swagger-ui.css">
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+    header {
+      background-color: #1F145A;
+      padding: 1rem;
+      color: white;
+      text-align: center;
+    }
+    #swagger-ui {
+      margin-top: 2rem;
+      padding: 0 2rem;
+    }
+    .logo {
+      max-height: 50px;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>CodeSmart Pro API</h1>
+    <p>Instant access to CPT, ICD-10, RVU data and modifiers via REST API.</p>
+  </header>
+
+  <div id="swagger-ui"></div>
+
+  <script src="https://unpkg.com/swagger-ui-dist/swagger-ui-bundle.js"></script>
+  <script>
+    SwaggerUIBundle({
+      url: "codesmartpro_openapi.json",
+      dom_id: "#swagger-ui",
+      deepLinking: true,
+      presets: [SwaggerUIBundle.presets.apis],
+      layout: "BaseLayout"
+    });
+  </script>
+</body>
+</html>
